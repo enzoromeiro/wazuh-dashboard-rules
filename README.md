@@ -50,4 +50,7 @@ Configuração Wazuh: No arquivo ossec.conf do agente, habilite a leitura do log
 
 ![ossec.config file](/img/ossecconfig-audit.jpeg)
 
-Regras Customizadas: Copie os arquivos .xml da pasta /rules deste repositório para o arquivo em /var/ossec/etc/rules/local_rules.xml no seu Manager.
+Regras Customizadas: Copie os arquivos .xml da pasta /wrules deste repositório para o arquivo em /var/ossec/etc/rules/local_rules.xml no seu Manager. A regra 100004 eu criei para elíminar o ruído de um evento que estava ocorrendo frequentemente, mas era de level baixo (é opcional).
+
+![regras locais wazuh](/img/regraslocais.jpeg)
+
