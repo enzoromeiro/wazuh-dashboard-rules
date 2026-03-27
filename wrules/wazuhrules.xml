@@ -8,7 +8,7 @@
     <group>auditd,command,</group>
   </rule>
 
-  <rule id="100003" level="0">
+  <rule id="100004" level="0">
     <if_sid>80730</if_sid>
     <description>Eliminando ruído.</description>
   </rule>
