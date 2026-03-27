@@ -35,3 +35,12 @@ Putty
 Auditd
 
 Regras XML Customizadas
+
+### Como Replicar
+Ambiente: Importe as VMs (Ubuntu para o Manager/Agente e Windows para o Atacante).
+
+Agente Linux: Instale o auditd (sudo apt install auditd) e adicione as regras de monitoramento no arquivo /etc/audit/rules.d/audit.rules.
+
+Configuração Wazuh: No arquivo ossec.conf do agente, habilite a leitura do log do audit: <location>/var/log/audit/audit.log</location>.
+
+Regras Customizadas: Copie os arquivos .xml da pasta /rules deste repositório para o diretório /var/ossec/etc/rules/ no seu Manager.
