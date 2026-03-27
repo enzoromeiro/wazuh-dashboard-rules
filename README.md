@@ -39,8 +39,15 @@ Regras XML Customizadas
 ### Como Replicar
 Ambiente: Importe as VMs (Ubuntu para o Manager/Agente e Windows para o Atacante).
 
-Agente Linux: Instale o auditd (sudo apt install auditd) e adicione as regras de monitoramento no arquivo /etc/audit/rules.d/audit.rules.
+Agente Linux: Instale o auditd (sudo apt install auditd) crie um arquivo na pasta /etc/audit/rules.d/ e adicione as regras de monitoramento no arquivo criado por você, no meu caso eu nomeei de auditsoc.rules. Nessa pasta já vem um arquivo chamado "audit.rules" mas não adicione sua regra ali, pois é temporário. Por padrão eu utilizei as regras do Florian Roth (https://github.com/neo23x0/auditd), mas para esse projeto eu criei uma regra que monitora execução de arquivos, através da syscall execve.
+
+#### Arquivo criado:
+![audit rule path](/img/regrasaudit-path.jpeg)
+#### Regra: 
+![audit rule](/img/regraaudit.jpeg)
 
 Configuração Wazuh: No arquivo ossec.conf do agente, habilite a leitura do log do audit: <location>/var/log/audit/audit.log</location>.
 
-Regras Customizadas: Copie os arquivos .xml da pasta /rules deste repositório para o diretório /var/ossec/etc/rules/ no seu Manager.
+![ossec.config file](/img/ossecconfig-audit.jpeg)
+
+Regras Customizadas: Copie os arquivos .xml da pasta /rules deste repositório para o arquivo em /var/ossec/etc/rules/local_rules.xml no seu Manager.
