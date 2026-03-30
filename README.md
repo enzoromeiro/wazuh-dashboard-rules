@@ -1,10 +1,11 @@
-# 🛡️ Wazuh SIEM: Auditoria de Comandos e Correlação de Identidade
-Este projeto demonstra a implementação de um ambiente de monitoramento centralizado utilizando o Wazuh, focado em visibilidade de terminal e auditoria de autenticação. O objetivo principal é transformar logs brutos em inteligência para um SOC (Security Operations Center).
+# 🛡️ Wazuh SIEM: Visibilidade de Terminal e Identidade
+Este projeto foca em duas camadas críticas de segurança:
 
-### 🚀 -Funcionalidades Implementadas
-Auditoria Avançada (Linux):
+Quem acessou? (Auditoria de Autenticação: Logins e tentativas de invasão).
 
-Integração com auditd no Linux para capturar a execução de comandos sensíveis (ex: adduser, chmod, chown, whoami, etc).
+O que fez? (Auditoria de Comandos: Monitoramento via Auditd no Linux para capturar a execução de comandos sensíveis (ex: adduser, chmod, chown, whoami, etc)).
+
+A união dessas camadas permite a Correlação de Identidade, transformando logs técnicos em informações claras através do dashboard customizado, auxiliando a tomada de decisão em um SOC.
 
 ### -Detecção de Ameaças em Tempo Real:
 
