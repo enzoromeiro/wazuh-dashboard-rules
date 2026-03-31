@@ -61,4 +61,5 @@ A configuração do dashboard permite diversos filtros para facilitar a visualiz
 
 ![dashboard de comandos sensíveis executados](/img/dashboard-comandos.png)
 
-#### Considerações finais: Não existe solução definitiva em segurança da informação, o mundo evolui, as metodologias usadas por atacantes evoluem, as ferramentas evoluem, no fim das contas cuidar dos três pilares (CID) da segurança da informação, é um trabalho constante e inevitável para todo negócio que almeja crescimento.
+#### Considerações finais: Um evento isolado nem sempre significa alguma coisa, mas a correlação de eventos suspeitos podem indicar um incidente. 
+#### Não existe solução definitiva em segurança da informação, o mundo evolui, as metodologias usadas por atacantes evoluem, as ferramentas evoluem, no fim das contas cuidar dos três pilares (CID) da segurança da informação, é um trabalho constante e inevitável para todo negócio que almeja crescimento.
