@@ -36,6 +36,7 @@ Agente Linux: Instale o auditd (sudo apt install auditd) crie um arquivo na past
 #### Arquivo criado:
 ![audit rule path](/img/regrasaudit-path.jpeg)
 #### Regra: 
+#### -a exit, always -F arch=b64 -S execve -k audit-wazuh-c
 ![audit rule](/img/regraaudit.jpeg)
 
 Configuração Wazuh: No arquivo ossec.conf do agente, habilite a leitura do log do audit: <location>/var/log/audit/audit.log</location>.
