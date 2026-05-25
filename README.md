@@ -62,5 +62,23 @@ A configuração do dashboard permite diversos filtros para facilitar a visualiz
 
 ![dashboard de comandos sensíveis executados](/img/dashboard-comandos.png)
 
+## 🛡️ Como Responder ao Incidente
+
+1. **Preservar evidências:** coletar logs, processos ativos e 
+   conexões antes de qualquer ação
+2. **Isolar a máquina:** remover da rede via EDR ou firewall 
+   para impedir movimentação lateral
+3. **Investigar persistência:** verificar usuários criados, 
+   crontabs, serviços novos e chaves SSH em authorized_keys
+4. **Verificar conexões ativas:** identificar possível C2:
+   - Linux: `netstat -tenp | grep ESTABLISHED`
+   - Windows: `netstat -anob | findstr ESTABLISHED`
+5. **Revogar acessos:** trocar senha se autenticação por senha, 
+   ou revogar chave em authorized_keys se autenticação por chave
+6. **Bloquear o IP** no firewall e investigar se pertence a 
+   botnet conhecida para aplicar blocklist
+7. **Escalar e documentar:** registrar todo o incidente e 
+   escalar para o time responsável
+
 #### Considerações finais: Um evento isolado nem sempre significa alguma coisa, mas a correlação de eventos suspeitos podem indicar um incidente. 
 #### Não existe solução definitiva em segurança da informação, o mundo evolui, as metodologias usadas por atacantes evoluem, as ferramentas evoluem, no fim das contas cuidar dos três pilares (CID) da segurança da informação, é um trabalho constante e inevitável para todo negócio que almeja crescimento.
